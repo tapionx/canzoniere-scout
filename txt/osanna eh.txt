@@ -1,6 +1,5 @@
 Osanna eh
 
-Intro chitarra
 Sol Do Sol Do Re Sol 
 
 Sol     Do    Sol 
@@ -8,9 +7,14 @@ OSANNA EH, OSANNA EH
 Do  Re   Sol
 OSANNA A CRISTO SIGNOR
 
-Sol Do Sol Re Sol
-SANTO SANTO OSANNA
-SANTO SANTO OSANNA
+Sol       Do
+SANTO SANTO 
+Sol Re Sol
+OSANNA
+Sol       Do
+SANTO SANTO 
+Sol Re Sol
+OSANNA
 
 I cieli e la terra o Signore,
 sono pieni di te.
