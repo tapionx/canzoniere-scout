@@ -2,19 +2,19 @@ Al chiaror del mattin
 
 SOL
 Al chiaror del mattin, al chiaror del mattin
-RE7                  DO             SOL
+     RE7                   SOL
 ci sveglia una canzon, ci sveglia una canzon.
-SOL
+           SOL
 Al chiaror del mattin, al chiaror del mattin
-RE7                           SOL
+    RE7                  SOL
 ci sveglia la canzon del sol.
 
 RIT.
 Su leviam, su leviam, 
-            RE7 DO        SOL
+    RE7                 SOL
 per avere il sol basta ridere,
 Su leviam, su leviam,
-        RE7         DO    SOL
+      RE7        SOL
 non è tempo di esitar.
 
 Se la pioggia cadrà, se la pioggia cadrà
