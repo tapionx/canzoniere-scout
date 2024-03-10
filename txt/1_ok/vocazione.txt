@@ -1,12 +1,12 @@
 Vocazione
 
-DO	SOL FA
+DO	      SOL         FA
 Era un giorno come tanti altri
-SOL	   DO      FA SOL
+SOL	   DO         FA SOL
 e quel giorno Lui passò.
-DO	     SOL     FA
+DO	         SOL           FA
 Era un uomo come tutti gli altri
-SOL	     DO       FA MI
+     SOL	     DO    FA MI
 e passando mi chiamò.
 LA-	        MI-           FA
 Come lo sapesse che il mio nome
@@ -14,11 +14,11 @@ Come lo sapesse che il mio nome
 era proprio quello.
   DO       SOL           FA 		
 Come mai vedesse proprio me
-           SOL        DO   FA SOL
+           SOL      DO   FA SOL
 nella sua vita, non lo so.
-DO             SOL	      FA
+DO            SOL	      FA
 Era un giorno come tanti altri
-         SOL	       DO   FA MI
+         SOL	     DO   FA MI
 e quel giorno mi chiamò.
 
 RIT.: LA- MI-     FA	     SOL
@@ -32,15 +32,26 @@ la mia strada
 DO     SOL 	  FA           DO 
 nella vita, all’incontro con Te.
 
+DO	      SOL         FA
 Era l’alba triste e senza vita
+      SOL	   DO      FA SOL
 e quel giorno lui passò
+DO	         SOL           FA
 era un uomo come tanti altri
+  SOL	     DO         FA MI
 ma la voce quella no.
+LA-        MI-
 Quante volte un uomo
+  FA                SOL 
 con il nome giusto mi ha chiamato
-una volta sola
-l’ho sentito pronunciare con amor.
+  DO       SOL           FA
+una volta sola l’ho sentito 
+SOL      DO          FA SOL
+pronunciare con amor.
+DO            SOL	      FA
 Era un uomo come nessun altro
-e passando mi chiamò.	
+SOL	     DO          FA MI
+e passando mi chiamò.
+
 RIT.
 
