@@ -1,0 +1,32 @@
+@page {
+    size: A4;
+    margin: 0;
+}
+@media print {
+    html, body {
+        width: 148,5mm;
+        height: 210mm;
+    }
+}
+
+.title {
+    font-weight: bold;
+    font-size: 1.5em;
+}
+
+.chord {
+    display: inline;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.line {
+    display: inline;
+}
+.song {
+    font-family: monospace;
+    white-space: pre;
+    break-after: page;
+    width: fit-content;
+    border: 1px solid black;
+}
