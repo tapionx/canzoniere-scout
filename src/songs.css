@@ -10,7 +10,6 @@
 }
 
 .verse {
-    break-inside: avoid;
     margin-top: 1rem;
 }
 
@@ -20,9 +19,13 @@
     column-rule: 1px solid black;
 }
 
+.columns .verse {
+    break-inside: avoid;
+}
+
 .title {
     font-weight: bold;
-    font-size: 1.5em;
+    font-size: 3rem;
 }
 
 .chord {

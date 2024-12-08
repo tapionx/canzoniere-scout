@@ -13,7 +13,6 @@
 }
 
 .verse {
-    break-inside: avoid;
     margin-top: 1rem;
 }
 
@@ -23,9 +22,13 @@
     column-rule: 1px solid black;
 }
 
+.columns .verse {
+    break-inside: avoid;
+}
+
 .title {
     font-weight: bold;
-    font-size: 1.5em;
+    font-size: 3rem;
 }
 
 .chord {
@@ -57,37 +60,19 @@ document.addEventListener("DOMContentLoaded", function() {
         console.log(song);
         let fontSize = parseFloat(window.getComputedStyle(song).fontSize); 
         const lyrics = song.querySelector('.lyrics');
-        if ((song.clientHeight / song.clientWidth) > ratio ){
-            // more tall than wide
-            while (song.clientHeight < pageHeight) {
-                fontSize += fontStep;
-                lyrics.style.fontSize = fontSize + 'px';
-            }
-            while (song.clientHeight > pageHeight) {
-                fontSize -= fontStep;
-                lyrics.style.fontSize = fontSize + 'px';
-            }
-            if (song.clientWidth < pageWidth / 2) {
-                lyrics.classList.add('columns');
-                while (song.clientWidth < pageWidth) {
-                    fontSize += fontStep;
-                    lyrics.style.fontSize = fontSize + 'px';
-                }
-                while (song.clientWidth > pageWidth) {
-                    fontSize -= fontStep;
-                    lyrics.style.fontSize = fontSize + 'px';
-                }
-            }
-        } else {
-            // more wide than tall
-            while (song.clientWidth < pageWidth) {
-                fontSize += fontStep;
-                lyrics.style.fontSize = fontSize + 'px';
-            }
-            while (song.clientWidth > pageWidth) {
-                fontSize -= fontStep;
-                lyrics.style.fontSize = fontSize + 'px';
-            }
+        // first make sure height is in one page
+        while (song.clientHeight > pageHeight || song.clientWidth > pageWidth) {
+            fontSize -= fontStep;
+            lyrics.style.fontSize = fontSize + 'px';
+        }
+        // now we can calculate if it's worth to use columns
+        if (song.clientWidth < pageWidth / 2) {
+            lyrics.classList.add('columns');
+        }
+        // now we can increase until the limit
+        while (song.clientHeight < pageHeight && song.clientWidth < pageWidth) {
+            fontSize += fontStep;
+            lyrics.style.fontSize = fontSize + 'px';
         }
     });
 });
