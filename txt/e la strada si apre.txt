@@ -17,7 +17,7 @@ LAm       SOL         RE
 La traiettoria di un volo che
 MIm       RE       DO
 sull'orizzonte di sera
- LAm      SIm     DO
+ LAm      SI-     DO
 tutto di questa natura
        RE       MIm    RE SOL RE
 ha una strada per sé
@@ -40,7 +40,7 @@ che non è più domani,
 usiamo allora queste mani
   MIm       RE        DO
 scaviamo a fondo nel cuore
- LAm      SIm        DO         RE4 RE
+ LAm      SI-        DO         RE4 RE
 solo scegliendo l'amore il mondo vedrà
 
                 SOL
@@ -72,7 +72,7 @@ seguendo sempre il sole,
 quando si sente assetato
   MIm     RE        DO
 deve raggiungere l'acqua
-  LAm       SIm      DO
+  LAm       SI-      DO
 sabbia che nella risacca
  RE     MIm 
 ritorna al mare

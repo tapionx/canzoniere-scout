@@ -2,19 +2,19 @@ Cantico delle creature
 
 Intro:
 RE SOL LA RE
-FA# SIm SOL RE
-SOL LA SIm SOL LA RE
-SOL LA SIm RE LA
+FA# SI- SOL RE
+SOL LA SI- SOL LA RE
+SOL LA SI- RE LA
 
 RE
 A te solo Buon Signore
      SOL              RE
 Si confanno gloria e onore
-     SIm   MI   LA      LA
+     SI-   MI   LA      LA
 A Te ogni laude et benedizione
      RE
 A Te solo si confanno
-        SOL LA SIm
+        SOL LA SI-
 Che l'altissimo Tu sei
        RE      LA
 E null'omo degno è
@@ -24,13 +24,13 @@ Te mentovare
 Si laudato Mio Signore
         SOL RE
 Con le Tue creature
-         SIm MI
+         SI- MI
 Specialmente Frate Sole
            LA
 E la sua luce
         RE
 Tu ci illumini di lui
-      SOL LA SIm
+      SOL LA SI-
 Che è bellezza e splendore
         RE LA
 Di Te Altissimo Signore
@@ -40,7 +40,7 @@ Porta il segno
 Si laudato Mio Signore
        SOL LA
 Per sorelle Luna e Stelle
-            FA# SIm
+            FA# SI-
 Che Tu in cielo le hai formate
          SOL RE
 Chiare e bel-le
@@ -52,14 +52,14 @@ Aria, nuvole e maltempo
 Che alle Tue creature dan sostentamento
 
 
-RE SOL RE SIm MI LA
-RE SOL LA SIm RE LA RE
+RE SOL RE SI- MI LA
+RE SOL LA SI- RE LA RE
 
      LA           RE
 Si laudato Mio Signore
      SOL       LA
 Per sorella nostra Acqua
-        FA#     SIm
+        FA#     SI-
 Ella è casta, molto utile
       SOL RE
 E prezio-sa
