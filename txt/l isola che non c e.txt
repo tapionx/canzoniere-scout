@@ -43,8 +43,10 @@ E non é un'invenzione
 e neanche un gioco di parole
       Lam       Mi7      Fa
 se ci credi ti basta perché
-        Do        Sol      Do  Fa Do Sol Fa Do Lam Mi7 Fa Do Sol Do Fa Do
+        Do        Sol      Do
 poi la strada la trovi da te
+
+Fa Do Sol Fa Do Lam Mi7 Fa Do Sol Do Fa Do
 
           Lam      Mi7        Lam       Mi7
 Son d'accordo con voi niente ladri e gendarmi,
