@@ -31,11 +31,10 @@
 }
 
 .line {
-    display: inline;
+    white-space: pre;
 }
 .song {
     font-family: monospace;
-    white-space: pre;
     break-after: page;
     width: fit-content;
     border: 1px solid black;
