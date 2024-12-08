@@ -31,10 +31,18 @@ with open(output_file, 'w') as html_file:
                 for i, line in enumerate(lines):
                     if i == 0:
                         html_page += f'<div class="title">{line}</div>\n'
+                        html_page += '<div class="lyrics">\n'
+                        html_page += '<div class="verse">\n'
                         continue
+                    if line.strip() == "":
+                        html_page += '</div>\n'
+                        html_page += '<div class="verse">\n'
                     for chord in CHORDS:
                         line = re.sub(rf'(?<!\w){chord}(?!\w)', f'<div class="chord">{chord}</div>', line)
-                    html_page += f'<div class="line">{line}</div>\n'
-                html_page += '</div>\n'
+                    if line:
+                        html_page += f'<div class="line">{line}</div>\n'
+                html_page += '</div>\n' # verse
+                html_page += '</div>\n' # lyrics    
+                html_page += '</div>\n' # song
             html_file.write(html_page)
     html_file.write('</body>\n</html>')

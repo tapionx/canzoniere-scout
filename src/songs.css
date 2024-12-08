@@ -9,6 +9,17 @@
     }
 }
 
+.verse {
+    break-inside: avoid;
+    margin-top: 1rem;
+}
+
+.columns {
+    column-count: 2;
+    column-gap: 1em;
+    column-rule: 1px solid black;
+}
+
 .title {
     font-weight: bold;
     font-size: 1.5em;
@@ -17,7 +28,6 @@
 .chord {
     display: inline;
     font-weight: bold;
-    text-transform: uppercase;
 }
 
 .line {
