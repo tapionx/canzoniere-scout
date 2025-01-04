@@ -43,7 +43,6 @@
     font-family: monospace;
     break-after: page;
     width: fit-content;
-    border: 1px solid black;
 }
 </style>
 <title>Songbook</title>
@@ -51,7 +50,7 @@
 <body>
 <script>
 document.addEventListener("DOMContentLoaded", function() {
-    let pageHeight = 1530;
+    let pageHeight = 1500;
     let pageWidth = 1100;
     let ratio = 1.41; // height 210mm / width 148.5mm
     let fontStep = 0.2;
@@ -61,16 +60,16 @@ document.addEventListener("DOMContentLoaded", function() {
         let fontSize = parseFloat(window.getComputedStyle(song).fontSize); 
         const lyrics = song.querySelector('.lyrics');
         // first make sure height is in one page
-        while (song.clientHeight > pageHeight || song.clientWidth > pageWidth) {
+        while (song.clientHeight > pageHeight || lyrics.clientWidth > pageWidth) {
             fontSize -= fontStep;
             lyrics.style.fontSize = fontSize + 'px';
         }
         // now we can calculate if it's worth to use columns
-        if (song.clientWidth < pageWidth / 2) {
+        if ((lyrics.clientWidth < pageWidth / 2) && (song.clientHeight > pageHeight * 0.5)) {
             lyrics.classList.add('columns');
         }
         // now we can increase until the limit
-        while (song.clientHeight < pageHeight && song.clientWidth < pageWidth) {
+        while (song.clientHeight < pageHeight && lyrics.clientWidth < pageWidth) {
             fontSize += fontStep;
             lyrics.style.fontSize = fontSize + 'px';
         }
@@ -470,61 +469,86 @@ document.addEventListener("DOMContentLoaded", function() {
 <div class="line">(Giombini)</div>
 </div>
 <div class="verse">
-<div class="line">INTR.: Do sol do fa sol   do sol do fa sol</div>
+<div class="line">INTR.: Do sol do fa sol   </div>
+<div class="line">do sol do fa sol</div>
 </div>
 <div class="verse">
 <div class="line">Do sol do fa sol do sol do fa sol</div>
 <div class="line">Glo - ria,        glo - ria</div>
-<div class="line">Do sol la-            fa    do sol do fa sol</div>
+<div class="line">Do sol la-          fa  do sol do fa sol</div>
 <div class="line">a Dio nell’alto dei cieli, glo - ria</div>
 <div class="line">do sol do fa sol do sol do fa sol</div>
 <div class="line">e pa – ce,       e pa - ce</div>
 <div class="line">do sol    la- fa do     sol     do do7</div>
 <div class="line">in terra agli uomini di buona volontà.</div>
-<div class="line">fa                        do</div>
-<div class="line">Ti lodiamo (ti lodiamo), ti benediciamo (ti benediciamo),</div>
-<div class="line"> fa                       sol</div>
-<div class="line">ti adoriamo (ti adoriamo), ti glorifichiamo (ti glorifichiamo),</div>
+<div class="line"><div class="chord">FA</div></div>
+<div class="line">Ti lodiamo (ti lodiamo)</div>
+<div class="line"><div class="chord">DO</div></div>
+<div class="line">ti benediciamo (ti benediciamo),</div>
+<div class="line"><div class="chord">FA</div></div>
+<div class="line">ti adoriamo (ti adoriamo)</div>
+<div class="line"><div class="chord">SOL</div></div>
+<div class="line">ti glorifichiamo (ti glorifichiamo),</div>
 <div class="line">do sol do fa sol do sol do fa sol</div>
 <div class="line">Ti rendiamo      gra - zie</div>
 <div class="line">Do sol la- fa do sol do fa sol</div>
 <div class="line"> per la tua gloria imme - nsa.</div>
 </div>
 <div class="verse">
-<div class="line">STACCO: do sol do fa sol do sol do fa sol do sol la- fa do sol do mi</div>
+<div class="line">do sol do fa sol do sol do fa sol</div>
+<div class="line">do sol la- fa do sol do mi</div>
 </div>
 <div class="verse">
-<div class="line"> La-            mi-             fa        sol do mi7</div>
-<div class="line">Signore Figlio Unigenito Gesù Cristo, Signore Dio,</div>
+<div class="line"> La-            mi-</div>
+<div class="line">Signore Figlio Unigenito</div>
+<div class="line">    fa        sol do mi7</div>
+<div class="line">Gesù Cristo, Signore Dio,</div>
 <div class="line">     la-   sol     fa# fa     mi</div>
 <div class="line">agnello di Dio, Figlio del Padre,</div>
-<div class="line">la-               mi-      la-       mi-</div>
-<div class="line">Tu che togli i peccati, i peccati del mondo</div>
-<div class="line"> Fa      do          re7         sol</div>
-<div class="line">abbi pietà di noi, abbi pietà di noi;</div>
-<div class="line"> la-             mi-       la-         mi-</div>
-<div class="line">Tu che togli i peccati, i peccati del mondo</div>
-<div class="line">  Fa         do     re7        sol</div>
-<div class="line">accogli, accogli la nostra supplica;</div>
-<div class="line">  Do                sol     la-           mi-</div>
-<div class="line"> Tu che siedi alla destra, alla destra del Padre</div>
-<div class="line">Fa            do       re         sol</div>
-<div class="line"> Abbi pietà di noi, abbi pietà di noi.</div>
+<div class="line">la-               mi-</div>
+<div class="line">Tu che togli i peccati</div>
+<div class="line">  la-       mi- </div>
+<div class="line">i peccati del mondo</div>
+<div class="line"> Fa      do</div>
+<div class="line">abbi pietà di noi,</div>
+<div class="line">  re7         sol</div>
+<div class="line">abbi pietà di noi;</div>
+<div class="line"> la-             mi-</div>
+<div class="line">Tu che togli i peccati</div>
+<div class="line">   la-         mi-</div>
+<div class="line">i peccati del mondo</div>
+<div class="line">  Fa         do</div>
+<div class="line">accogli, accogli</div>
+<div class="line">  re7        sol </div>
+<div class="line">la nostra supplica;</div>
+<div class="line">  Do                sol</div>
+<div class="line">Tu che siedi alla destra</div>
+<div class="line">    la-           mi-</div>
+<div class="line">alla destra del Padre</div>
+<div class="line">Fa            do</div>
+<div class="line">Abbi pietà di noi,</div>
+<div class="line">re         sol</div>
+<div class="line">abbi pietà di noi.</div>
 </div>
 <div class="verse">
 </div>
 <div class="verse">
-<div class="line">STACCO: do sol do fa sol do sol do fa sol do sol la- fa do sol do do7</div>
+<div class="line">do sol do fa sol do sol do fa sol</div>
+<div class="line">do sol la- fa do sol do do7</div>
 </div>
 <div class="verse">
 <div class="line"> fa</div>
-<div class="line">Perché Tu solo il Santo (perché Tu solo il Santo),</div>
+<div class="line">Perché Tu solo il Santo </div>
+<div class="line">(perché Tu solo il Santo),</div>
 <div class="line"> do</div>
-<div class="line">Tu solo il Signore (Tu solo il Signore),</div>
+<div class="line">Tu solo il Signore </div>
+<div class="line">(Tu solo il Signore),</div>
 <div class="line"> fa</div>
-<div class="line">Tu solo l’Altissimo (Tu solo l’Altissimo)</div>
+<div class="line">Tu solo l’Altissimo </div>
+<div class="line">(Tu solo l’Altissimo)</div>
 <div class="line">sol</div>
-<div class="line">Gesù Cristo (Gesù Cristo),</div>
+<div class="line">Gesù Cristo </div>
+<div class="line">(Gesù Cristo),</div>
 </div>
 <div class="verse">
 <div class="line">do sol do fa sol do sol do fa sol</div>
@@ -1792,6 +1816,8 @@ document.addEventListener("DOMContentLoaded", function() {
 <div class="line">si raccoglie nel mister</div>
 </div>
 <div class="verse">
+</div>
+<div class="verse">
 <div class="line">  <div class="chord">RE</div>-        <div class="chord">LA</div></div>
 <div class="line">O Vergine di luce</div>
 <div class="line">    <div class="chord">RE</div>-           <div class="chord">LA</div></div>
@@ -1800,6 +1826,8 @@ document.addEventListener("DOMContentLoaded", function() {
 <div class="line">ascolta la preghiera</div>
 <div class="line"><div class="chord">RE</div>-           <div class="chord">LA</div>   <div class="chord">RE</div>-</div>
 <div class="line">Madre degli esplorator</div>
+</div>
+<div class="verse">
 </div>
 <div class="verse">
 <div class="line"><div class="chord">RE</div>-          <div class="chord">LA</div>   <div class="chord">RE</div>-</div>
@@ -1812,6 +1840,8 @@ document.addEventListener("DOMContentLoaded", function() {
 <div class="line">ti ameranno sempre più</div>
 </div>
 <div class="verse">
+</div>
+<div class="verse">
 <div class="line">  <div class="chord">RE</div>-        <div class="chord">LA</div></div>
 <div class="line">O Vergine di luce</div>
 <div class="line">    <div class="chord">RE</div>-           <div class="chord">LA</div></div>
@@ -1820,6 +1850,8 @@ document.addEventListener("DOMContentLoaded", function() {
 <div class="line">ascolta la preghiera</div>
 <div class="line"><div class="chord">RE</div>-           <div class="chord">LA</div>   <div class="chord">RE</div>-</div>
 <div class="line">Madre degli esplorator</div>
+</div>
+<div class="verse">
 </div>
 <div class="verse">
 <div class="line"><div class="chord">RE</div>-             <div class="chord">LA</div>  <div class="chord">RE</div>-</div>
@@ -1832,6 +1864,8 @@ document.addEventListener("DOMContentLoaded", function() {
 <div class="line">ci proteggi da ogni mal</div>
 </div>
 <div class="verse">
+</div>
+<div class="verse">
 <div class="line">  <div class="chord">RE</div>-        <div class="chord">LA</div></div>
 <div class="line">O Vergine di luce</div>
 <div class="line">    <div class="chord">RE</div>-           <div class="chord">LA</div></div>
@@ -1842,6 +1876,8 @@ document.addEventListener("DOMContentLoaded", function() {
 <div class="line">Madre degli esplorator</div>
 </div>
 <div class="verse">
+</div>
+<div class="verse">
 <div class="line"><div class="chord">RE</div>-           <div class="chord">LA</div>    <div class="chord">RE</div>-</div>
 <div class="line">Come le tende a noi care</div>
 <div class="line">  <div class="chord">LA</div>     <div class="chord">RE</div>-       <div class="chord">LA</div></div>
@@ -1850,6 +1886,8 @@ document.addEventListener("DOMContentLoaded", function() {
 <div class="line">così avvolgici col tuo pregare</div>
 <div class="line">         SIb        <div class="chord">FA</div></div>
 <div class="line">quando saremo per morir</div>
+</div>
+<div class="verse">
 </div>
 <div class="verse">
 <div class="line">  <div class="chord">RE</div>-        <div class="chord">LA</div></div>
@@ -3226,8 +3264,10 @@ document.addEventListener("DOMContentLoaded", function() {
 <div class="verse">
 <div class="line"><div class="chord">RE</div>       <div class="chord">FA</div>#-  <div class="chord">SOL</div>    <div class="chord">LA</div></div>
 <div class="line">Tu scrivi che questa non è</div>
-<div class="line"><div class="chord">RE</div>                <div class="chord">LA</div>                <div class="chord">SOL</div>              <div class="chord">LA</div></div>
-<div class="line">perfetta letizia, perfetta letizia, perfetta letizia ah ah</div>
+<div class="line"><div class="chord">RE</div>                <div class="chord">LA</div></div>
+<div class="line">perfetta letizia, perfetta</div>
+<div class="line"><div class="chord">SOL</div>              <div class="chord">LA</div></div>
+<div class="line">letizia, perfetta letizia ah ah</div>
 </div>
 <div class="verse">
 <div class="line"><div class="chord">RE</div></div>
@@ -3250,12 +3290,16 @@ document.addEventListener("DOMContentLoaded", function() {
 <div class="verse">
 <div class="line"><div class="chord">RE</div>       <div class="chord">FA</div>#-  <div class="chord">SOL</div>    <div class="chord">LA</div></div>
 <div class="line">Tu scrivi che questa non è</div>
-<div class="line"><div class="chord">RE</div>                <div class="chord">LA</div>                <div class="chord">SOL</div>              <div class="chord">LA</div></div>
-<div class="line">perfetta letizia, perfetta letizia, perfetta letizia ah ah</div>
+<div class="line"><div class="chord">RE</div>                <div class="chord">LA</div></div>
+<div class="line">perfetta letizia, perfetta letizia, </div>
+<div class="line"><div class="chord">SOL</div>              <div class="chord">LA</div></div>
+<div class="line">perfetta letizia ah ah</div>
 </div>
 <div class="verse">
-<div class="line"><div class="chord">SOL</div>            <div class="chord">RE</div>               <div class="chord">FA</div>#-              SI7 </div>
-<div class="line">Se in mezzo a Frate Inverno, tra neve, freddo e vento,</div>
+<div class="line"><div class="chord">SOL</div>            <div class="chord">RE</div></div>
+<div class="line">Se in mezzo a Frate Inverno,</div>
+<div class="line">    <div class="chord">FA</div>#-              SI7</div>
+<div class="line">tra neve, freddo e vento,</div>
 </div>
 <div class="verse">
 <div class="line"><div class="chord">MI</div></div>
@@ -3286,10 +3330,14 @@ document.addEventListener("DOMContentLoaded", function() {
 <div class="verse">
 <div class="line"><div class="chord">MI</div>        <div class="chord">SOL</div>#- <div class="chord">LA</div>    <div class="chord">SI</div></div>
 <div class="line">Tu scrivi che questa è</div>
-<div class="line"><div class="chord">MI</div>                 <div class="chord">SOL</div>#-            <div class="chord">LA</div>                    <div class="chord">SI</div></div>
-<div class="line">perfetta letizia, perfetta letizia, perfetta letizia ah, ah perfetta letizia</div>
-<div class="line"><div class="chord">MI</div>                 <div class="chord">SOL</div>#-            <div class="chord">LA</div>                    <div class="chord">SI</div></div>
-<div class="line">perfetta letizia, perfetta letizia, perfetta letizia ah, ah perfetta letizia</div>
+<div class="line"><div class="chord">MI</div>                 <div class="chord">SOL</div>#-</div>
+<div class="line">perfetta letizia, perfetta letizia, </div>
+<div class="line"><div class="chord">LA</div>                    <div class="chord">SI</div></div>
+<div class="line">perfetta letizia ah, ah perfetta letizia</div>
+<div class="line"><div class="chord">MI</div>                 <div class="chord">SOL</div>#-</div>
+<div class="line">perfetta letizia, perfetta letizia,</div>
+<div class="line"> <div class="chord">LA</div>                    <div class="chord">SI</div> </div>
+<div class="line">perfetta letizia ah, ah perfetta letizia</div>
 </div>
 <div class="verse">
 </div>
@@ -3929,25 +3977,42 @@ document.addEventListener("DOMContentLoaded", function() {
 <div class="verse">
 </div>
 <div class="verse">
-<div class="line"><div class="chord">DO</div>        <div class="chord">SOL</div>         <div class="chord">LA</div>-             <div class="chord">FA</div>      <div class="chord">SOL</div></div>
-<div class="line">Eravamo ragazzi ancora, con il tempo aperto davanti</div>
-<div class="line">i giorni più lunghi coi calzoni corti,</div>
-<div class="line">a caccia di vento i semplici canti.</div>
-<div class="line">La carta e la colla insieme, incrociare due canne più forti,</div>
-<div class="line">legate allo spago le nostre speranze,</div>
-<div class="line">nei nostri aquiloni i sogni mai morti.</div>
-<div class="line">Si alzano ora in alto, più in alto di allora le danze,</div>
-<div class="line">restare confusi il tempo ti afferra</div>
-<div class="line">scommetter sul mondo ma senza arroganza.</div>
-<div class="line">La testa nel cielo è vero, ma il camminare ti entra da terra,</div>
-<div class="line">e pronti a partire rischiare la strada,</div>
-<div class="line">i fiori più veri non son quelli di serra.</div>
+<div class="line"><div class="chord">DO</div>        <div class="chord">SOL</div>         </div>
+<div class="line">Eravamo ragazzi ancora,</div>
+<div class="line"><div class="chord">LA</div>-             <div class="chord">FA</div>      <div class="chord">SOL</div> </div>
+<div class="line">con il tempo aperto davanti</div>
+<div class="line">i giorni più lunghi</div>
+<div class="line">coi calzoni corti,</div>
+<div class="line">a caccia di vento </div>
+<div class="line">i semplici canti.</div>
+<div class="line">La carta e la colla insieme,</div>
+<div class="line">incrociare due canne più forti,</div>
+<div class="line">legate allo spago </div>
+<div class="line">le nostre speranze,</div>
+<div class="line">nei nostri aquiloni </div>
+<div class="line">i sogni mai morti.</div>
+<div class="line">Si alzano ora in alto,</div>
+<div class="line">più in alto di allora le danze,</div>
+<div class="line">restare confusi </div>
+<div class="line">il tempo ti afferra</div>
+<div class="line">scommetter sul mondo</div>
+<div class="line">ma senza arroganza.</div>
+<div class="line">La testa nel cielo è vero,</div>
+<div class="line">ma il camminare ti entra da terra,</div>
+<div class="line">e pronti a partire</div>
+<div class="line">rischiare la strada,</div>
+<div class="line">i fiori più veri </div>
+<div class="line">non son quelli di serra.</div>
 </div>
 <div class="verse">
-<div class="line">    E va, più in su, più in là, controvento,</div>
-<div class="line">    è lotta dura ma tendi lo spago</div>
-<div class="line">    E se sta a cuore a noi non è vana speranza</div>
-<div class="line">    cambierà: oltre la siepe và.</div>
+<div class="line">E va, più in su, più in là, </div>
+<div class="line">controvento,</div>
+<div class="line">è lotta dura ma </div>
+<div class="line">tendi lo spago</div>
+<div class="line">E se sta a cuore a noi</div>
+<div class="line">non è vana speranza</div>
+<div class="line">cambierà: </div>
+<div class="line">oltre la siepe và.</div>
 </div>
 <div class="verse">
 </div>
@@ -3956,7 +4021,8 @@ document.addEventListener("DOMContentLoaded", function() {
 <div class="line">indifferenza che al potere fa ladri,</div>
 <div class="line">la terra ormai scossa dagli atomi pazzi,</div>
 <div class="line">denaro trionfante schiaccia grida di madri.</div>
-<div class="line">Ed ancora la grande corsa, per gli stupidi armati razzi,</div>
+<div class="line">Ed ancora la grande corsa,</div>
+<div class="line">per gli stupidi armati razzi,</div>
 <div class="line">il rialzo e i profitti, più disoccupati</div>
 <div class="line">e c'è sempre chi dice: "state buoni ragazzi".</div>
 <div class="line">E nascosta rassegnazione,</div>
@@ -3974,29 +4040,44 @@ document.addEventListener("DOMContentLoaded", function() {
 <div class="verse">
 </div>
 <div class="verse">
-<div class="line"><div class="chord">RE</div>               <div class="chord">LA</div>         <div class="chord">SI</div>-              <div class="chord">SOL</div>     <div class="chord">LA</div></div>
-<div class="line">Ed ancora più in alto vola, prende quota, sorvola vallate,</div>
-<div class="line">portato dai venti ma le idee le ha chiare</div>
-<div class="line">di certe nubi si muore, di acque inquinate.</div>
-<div class="line">Non cantare per evasione, canta solo se vuoi pensare,</div>
-<div class="line">il fine nel mezzo come il grano nel seme,</div>
-<div class="line">un progresso per l'uomo dobbiamo imparare.</div>
-<div class="line">Meccanismi perversi fuori, meccanismi che dentro teme,</div>
+<div class="line"><div class="chord">RE</div>               <div class="chord">LA</div></div>
+<div class="line">Ed ancora più in alto vola</div>
+<div class="line"><div class="chord">SI</div>-              <div class="chord">SOL</div>     <div class="chord">LA</div></div>
+<div class="line">prende quota, sorvola vallate,</div>
+<div class="line">portato dai venti </div>
+<div class="line">ma le idee le ha chiare</div>
+<div class="line">di certe nubi si muore</div>
+<div class="line">di acque inquinate.</div>
+<div class="line">Non cantare per evasione</div>
+<div class="line">canta solo se vuoi pensare,</div>
+<div class="line">il fine nel mezzo</div>
+<div class="line">come il grano nel seme,</div>
+<div class="line">un progresso per l'uomo</div>
+<div class="line">dobbiamo imparare.</div>
+<div class="line">Meccanismi perversi fuori</div>
+<div class="line">meccanismi che dentro teme,</div>
 <div class="line">avere sembrare ti prendono a fondo,</div>
 <div class="line">cercare se stessi è più dura ma insieme ...</div>
-<div class="line">e lottare per realizzare un amore che sia fecondo,</div>
-<div class="line">via le porte blindate chiuse sugli egoismi,</div>
-<div class="line">un uomo e una donna spalancati sul mondo.</div>
+<div class="line">e lottare per realizzare</div>
+<div class="line">un amore che sia fecondo,</div>
+<div class="line">via le porte blindate</div>
+<div class="line">chiuse sugli egoismi,</div>
+<div class="line">un uomo e una donna</div>
+<div class="line">spalancati sul mondo.</div>
 </div>
 <div class="verse">
 <div class="line">    E va, più in su, ...</div>
 </div>
 <div class="verse">
-<div class="line"><div class="chord">MI</div>             <div class="chord">SI</div>          <div class="chord">DO</div>#-                 <div class="chord">LA</div>     <div class="chord">SI</div></div>
-<div class="line">E spingendo di nuovo i passi sulla strada senza fare rumore,</div>
-<div class="line">non teme il vento, con la pioggia e col sole,</div>
+<div class="line"><div class="chord">MI</div>             <div class="chord">SI</div></div>
+<div class="line">E spingendo di nuovo i passi</div>
+<div class="line"><div class="chord">DO</div>#-                 <div class="chord">LA</div>     <div class="chord">SI</div></div>
+<div class="line">sulla strada senza fare rumore,</div>
+<div class="line">non teme il vento,</div>
+<div class="line">con la pioggia e col sole,</div>
 <div class="line">già e non ancora seguire l'amore.</div>
-<div class="line">E un tesoro nascosto cerca, è nascosto giù nelle gole,</div>
+<div class="line">E un tesoro nascosto cerca,</div>
+<div class="line">è nascosto giù nelle gole,</div>
 <div class="line">è paura che prende quando siamo vicini</div>
 <div class="line">a chi in vita sua non mai ha avuto parole.</div>
 <div class="line">E lo scopri negli occhi è vero,</div>
@@ -4058,17 +4139,21 @@ document.addEventListener("DOMContentLoaded", function() {
 <div class="verse">
 <div class="line"><div class="chord">DO</div>       Fadim</div>
 <div class="line">Ascolta, il rumore delle onde del mare</div>
-<div class="line">ed il canto notturno di mille pensieri dell' umanità</div>
-<div class="line">che riposa dopo il traffico di questo giorno</div>
-<div class="line">e di sera si incanta davanti</div>
-<div class="line">al tramonto che il sole le dà.</div>
+<div class="line">ed il canto notturno di mille pensieri </div>
+<div class="line">dell' umanità</div>
+<div class="line">che riposa </div>
+<div class="line">dopo il traffico di questo giorno</div>
+<div class="line">e di sera si incanta davanti al tramonto</div>
+<div class="line">che il sole le dà.</div>
 </div>
 <div class="verse">
-<div class="line">Respira, e da un soffio di vento raccogli</div>
-<div class="line">il profumo dei fiori che non hanno chiesto che un po' di umiltà</div>
+<div class="line">Respira, </div>
+<div class="line">e da un soffio di vento raccogli</div>
+<div class="line">il profumo dei fiori che non hanno chiesto</div>
+<div class="line">che un po' di umiltà</div>
 <div class="line">e se vuoi puoi cantare</div>
 <div class="line">e cantare che hai voglia di dare</div>
-<div class="line">e cantare che ancora nascosta può esistere la...</div>
+<div class="line">e cantare che ancora nascosta può esistere la</div>
 </div>
 <div class="verse">
 <div class="line"><div class="chord">DO</div>                  <div class="chord">RE</div>-               <div class="chord">MI</div>-</div>
@@ -4079,10 +4164,14 @@ document.addEventListener("DOMContentLoaded", function() {
 <div class="line">e puoi sperare, perché ti han detto bugie</div>
 <div class="line">             <div class="chord">RE</div>-                  <div class="chord">MI</div>-</div>
 <div class="line">se han raccontato che l' hanno uccisa,</div>
-<div class="line">              <div class="chord">FA</div>        <div class="chord">DO</div>              <div class="chord">RE</div>-</div>
-<div class="line">che han calpestato la gioia, perché la gioia,</div>
-<div class="line">            <div class="chord">MI</div>-              <div class="chord">FA</div>         <div class="chord">SOL</div></div>
-<div class="line">perché la gioia, perché la gioia è con te.</div>
+<div class="line">              <div class="chord">FA</div>        <div class="chord">DO</div></div>
+<div class="line">che han calpestato la gioia</div>
+<div class="line">         <div class="chord">RE</div>-</div>
+<div class="line">perché la gioia,</div>
+<div class="line">            <div class="chord">MI</div>-</div>
+<div class="line">perché la gioia, </div>
+<div class="line">         <div class="chord">FA</div>         <div class="chord">SOL</div></div>
+<div class="line">perché la gioia è con te.</div>
 </div>
 <div class="verse">
 <div class="line">     <div class="chord">FA</div>              <div class="chord">SOL</div>  <div class="chord">LA</div>-</div>
@@ -4105,7 +4194,7 @@ document.addEventListener("DOMContentLoaded", function() {
 <div class="line">quest'aria scoperta stasera</div>
 <div class="line">e domani ritorna,</div>
 <div class="line">tra la gente che è sola e che spera</div>
-<div class="line">tu saprai che ancora nascosta può esistere la...</div>
+<div class="line">tu saprai che ancora nascosta può esistere la</div>
 </div>
 <div class="verse">
 </div>
@@ -4922,8 +5011,9 @@ document.addEventListener("DOMContentLoaded", function() {
 <div class="line">Modena City Ramblers</div>
 </div>
 <div class="verse">
-<div class="line">Intro:</div>
 <div class="line">MIm <div class="chord">DO</div> <div class="chord">SOL</div> <div class="chord">SI</div></div>
+</div>
+<div class="verse">
 <div class="line">MIm <div class="chord">SOL</div></div>
 <div class="line">Nato nella terra dei vespri e degli aranci</div>
 <div class="line"><div class="chord">DO</div> <div class="chord">SI</div></div>
@@ -4940,6 +5030,8 @@ document.addEventListener("DOMContentLoaded", function() {
 <div class="line">Si sa dove si nasce ma non come si muore</div>
 <div class="line"><div class="chord">DO</div> <div class="chord">SI</div></div>
 <div class="line">e non se un ideale ti porterà dolore</div>
+</div>
+<div class="verse">
 <div class="line">LAm MIm</div>
 <div class="line">Ma la tua vita adesso puoi cambiare</div>
 <div class="line">LAm MIm</div>
@@ -4948,6 +5040,8 @@ document.addEventListener("DOMContentLoaded", function() {
 <div class="line">Gridando forte, senza aver paura</div>
 <div class="line"><div class="chord">SI</div></div>
 <div class="line">contando cento passi lungo la tua strada</div>
+</div>
+<div class="verse">
 <div class="line">MIm</div>
 <div class="line">Allora Uno, due, tre, quattro</div>
 <div class="line"><div class="chord">DO</div></div>
@@ -4964,6 +5058,8 @@ document.addEventListener("DOMContentLoaded", function() {
 <div class="line">Uno, due, tre, quattro</div>
 <div class="line"><div class="chord">SI</div> MIm</div>
 <div class="line">cinque, dieci, cento passi!</div>
+</div>
+<div class="verse">
 <div class="line">MIm <div class="chord">SOL</div></div>
 <div class="line">Poteva come tanti scegliere e partire</div>
 <div class="line"><div class="chord">DO</div> <div class="chord">SI</div></div>
@@ -4982,6 +5078,8 @@ document.addEventListener("DOMContentLoaded", function() {
 <div class="line">gli amici disperati</div>
 <div class="line"><div class="chord">SI</div></div>
 <div class="line">non l'hanno più trovato</div>
+</div>
+<div class="verse">
 <div class="line">LAm MIm</div>
 <div class="line">Allora dimmi se tu sai contare</div>
 <div class="line"><div class="chord">DO</div> MIm</div>
@@ -4990,6 +5088,8 @@ document.addEventListener("DOMContentLoaded", function() {
 <div class="line">Contare, camminare insieme a cantare</div>
 <div class="line"><div class="chord">SI</div></div>
 <div class="line">la storia di Peppino e degli amici siciliani</div>
+</div>
+<div class="verse">
 <div class="line">MIm</div>
 <div class="line">Allora Uno, due, tre, quattro</div>
 <div class="line"><div class="chord">DO</div></div>
@@ -4997,37 +5097,17 @@ document.addEventListener("DOMContentLoaded", function() {
 <div class="line"><div class="chord">SOL</div></div>
 <div class="line">Uno, due, tre, quattro</div>
 <div class="line"><div class="chord">SI</div></div>
-<div class="line">cinque, dieci, cento passi!</div>
-<div class="line">MIm</div>
-<div class="line">Uno, due, tre, quattro</div>
-<div class="line"><div class="chord">DO</div></div>
-<div class="line">cinque, dieci, cento passi</div>
-<div class="line"><div class="chord">SOL</div></div>
-<div class="line">Uno, due, tre, quattro</div>
-<div class="line"><div class="chord">SI</div></div>
-<div class="line">cinque, dieci, cento passi!</div>
-<div class="line">MIm</div>
-<div class="line">Uno, due, tre, quattro</div>
-<div class="line"><div class="chord">DO</div></div>
-<div class="line">cinque, dieci, cento passi</div>
-<div class="line"><div class="chord">SOL</div></div>
-<div class="line">Uno, due, tre, quattro</div>
-<div class="line"><div class="chord">SI</div></div>
-<div class="line">cinque, dieci, cento passi!</div>
-<div class="line">MIm</div>
-<div class="line">Uno, due, tre, quattro</div>
-<div class="line"><div class="chord">DO</div></div>
-<div class="line">cinque, dieci, cento passi</div>
-<div class="line"><div class="chord">SOL</div></div>
-<div class="line">Uno, due, tre, quattro</div>
-<div class="line"><div class="chord">SI</div> MIm</div>
-<div class="line">cinque, dieci, cento passi!</div>
+<div class="line">cinque, dieci, cento passi! (x4)</div>
+</div>
+<div class="verse">
 <div class="line">MIm</div>
 <div class="line">Era la notte buia dello Stato Italiano</div>
 <div class="line">Quella del nove maggio settantotto</div>
 <div class="line">La notte di via Caetani</div>
 <div class="line">del corpo di Aldo Moro</div>
 <div class="line">L'alba dei funerali di uno stato...</div>
+</div>
+<div class="verse">
 <div class="line">LAm MIm</div>
 <div class="line">Allora dimmi se tu sai contare</div>
 <div class="line"><div class="chord">DO</div> MIm</div>
@@ -5036,6 +5116,8 @@ document.addEventListener("DOMContentLoaded", function() {
 <div class="line">Contare, camminare insieme a cantare</div>
 <div class="line"><div class="chord">SI</div></div>
 <div class="line">la storia di Peppino e degli amici siciliani</div>
+</div>
+<div class="verse">
 <div class="line">MIm</div>
 <div class="line">Allora Uno, due, tre, quattro</div>
 <div class="line"><div class="chord">DO</div></div>
@@ -5043,31 +5125,7 @@ document.addEventListener("DOMContentLoaded", function() {
 <div class="line"><div class="chord">SOL</div></div>
 <div class="line">Uno, due, tre, quattro</div>
 <div class="line"><div class="chord">SI</div></div>
-<div class="line">cinque, dieci, cento passi!</div>
-<div class="line">MIm</div>
-<div class="line">Uno, due, tre, quattro</div>
-<div class="line"><div class="chord">DO</div></div>
-<div class="line">cinque, dieci, cento passi</div>
-<div class="line"><div class="chord">SOL</div></div>
-<div class="line">Uno, due, tre, quattro</div>
-<div class="line"><div class="chord">SI</div></div>
-<div class="line">cinque, dieci, cento passi!</div>
-<div class="line">MIm</div>
-<div class="line">Uno, due, tre, quattro</div>
-<div class="line"><div class="chord">DO</div></div>
-<div class="line">cinque, dieci, cento passi</div>
-<div class="line"><div class="chord">SOL</div></div>
-<div class="line">Uno, due, tre, quattro</div>
-<div class="line"><div class="chord">SI</div></div>
-<div class="line">cinque, dieci, cento passi!</div>
-<div class="line">MIm</div>
-<div class="line">Uno, due, tre, quattro</div>
-<div class="line"><div class="chord">DO</div></div>
-<div class="line">cinque, dieci, cento passi</div>
-<div class="line"><div class="chord">SOL</div></div>
-<div class="line">Uno, due, tre, quattro</div>
-<div class="line"><div class="chord">SI</div> MIm</div>
-<div class="line">cinque, dieci, cento passi!</div>
+<div class="line">cinque, dieci, cento passi! (x4)</div>
 </div>
 </div>
 </div>
@@ -5931,8 +5989,9 @@ document.addEventListener("DOMContentLoaded", function() {
 <div class="line">Route Nazionale RS 2014 (San Rossore)</div>
 </div>
 <div class="verse">
-<div class="line">Intro:</div>
 <div class="line"><div class="chord">MI</div> <div class="chord">LA</div> <div class="chord">MI</div> <div class="chord">LA</div> <div class="chord">MI</div></div>
+</div>
+<div class="verse">
 <div class="line"><div class="chord">MI</div></div>
 <div class="line">Come Giuseppe</div>
 <div class="line"><div class="chord">SI</div> <div class="chord">DO</div>#m</div>
@@ -5947,6 +6006,8 @@ document.addEventListener("DOMContentLoaded", function() {
 <div class="line">E l'amò fino alla fine</div>
 <div class="line"><div class="chord">SI</div></div>
 <div class="line">Ecco un po' così vorrei</div>
+</div>
+<div class="verse">
 <div class="line"><div class="chord">MI</div></div>
 <div class="line">Come Maria</div>
 <div class="line"><div class="chord">SI</div> <div class="chord">DO</div>#m</div>
@@ -5961,6 +6022,8 @@ document.addEventListener("DOMContentLoaded", function() {
 <div class="line">E l'amò fino alla fine</div>
 <div class="line"><div class="chord">SI</div></div>
 <div class="line">Ecco un po' così vorrei</div>
+</div>
+<div class="verse">
 <div class="line"><div class="chord">MI</div></div>
 <div class="line">In piedi nei piedi</div>
 <div class="line"><div class="chord">LA</div> <div class="chord">MI</div></div>
@@ -5976,6 +6039,8 @@ document.addEventListener("DOMContentLoaded", function() {
 <div class="line">Lì dove mi chiedi i miei piedi con te</div>
 <div class="line"><div class="chord">LA</div> <div class="chord">MI</div> <div class="chord">SI</div> <div class="chord">MI</div> <div class="chord">SI</div></div>
 <div class="line">Lì dove mi chiedi in piedi per te</div>
+</div>
+<div class="verse">
 <div class="line"><div class="chord">MI</div></div>
 <div class="line">Come Francesco</div>
 <div class="line"><div class="chord">SI</div> <div class="chord">DO</div>#m</div>
@@ -5990,6 +6055,8 @@ document.addEventListener("DOMContentLoaded", function() {
 <div class="line">E l'amò fino alla fine</div>
 <div class="line"><div class="chord">SI</div></div>
 <div class="line">Ecco un po' così vorrei</div>
+</div>
+<div class="verse">
 <div class="line"><div class="chord">MI</div></div>
 <div class="line">Come Sophie</div>
 <div class="line"><div class="chord">SI</div> <div class="chord">DO</div>#m</div>
@@ -6004,21 +6071,11 @@ document.addEventListener("DOMContentLoaded", function() {
 <div class="line">E l'amò fino alla fine</div>
 <div class="line"><div class="chord">SI</div></div>
 <div class="line">Ecco un po' così vorrei</div>
-<div class="line"><div class="chord">MI</div></div>
-<div class="line">In piedi nei piedi</div>
-<div class="line"><div class="chord">LA</div> <div class="chord">MI</div></div>
-<div class="line">Il coraggio che ho</div>
-<div class="line"><div class="chord">LA</div> <div class="chord">MI</div></div>
-<div class="line">Che mi porti lontano</div>
-<div class="line"><div class="chord">LA</div> <div class="chord">MI</div></div>
-<div class="line">Per sentire vicino</div>
-<div class="line">E metto i miei piedi</div>
-<div class="line"><div class="chord">LA</div> <div class="chord">MI</div></div>
-<div class="line">Nella vita che c'è</div>
-<div class="line"><div class="chord">LA</div> <div class="chord">MI</div> <div class="chord">SI</div> <div class="chord">MI</div></div>
-<div class="line">Lì dove mi chiedi i miei piedi con te</div>
-<div class="line"><div class="chord">LA</div> <div class="chord">MI</div> <div class="chord">SI</div> <div class="chord">MI</div> <div class="chord">SI</div></div>
-<div class="line">Lì dove mi chiedi in piedi per te</div>
+</div>
+<div class="verse">
+<div class="line">In piedi nei piedi ..</div>
+</div>
+<div class="verse">
 <div class="line"><div class="chord">MI</div></div>
 <div class="line">Come Peppino</div>
 <div class="line"><div class="chord">SI</div> <div class="chord">DO</div>#m</div>
@@ -6033,6 +6090,8 @@ document.addEventListener("DOMContentLoaded", function() {
 <div class="line">E contò fino alla fine</div>
 <div class="line"><div class="chord">SI</div></div>
 <div class="line">Ecco un po' così vorrei</div>
+</div>
+<div class="verse">
 <div class="line"><div class="chord">MI</div></div>
 <div class="line">E come me</div>
 <div class="line"><div class="chord">SI</div> <div class="chord">DO</div>#m</div>
@@ -6047,79 +6106,9 @@ document.addEventListener("DOMContentLoaded", function() {
 <div class="line">E lo chiedo anche ai miei piedi</div>
 <div class="line"><div class="chord">SI</div></div>
 <div class="line">Di essere lì dove tu sei</div>
-<div class="line"><div class="chord">MI</div></div>
-<div class="line">In piedi nei piedi</div>
-<div class="line"><div class="chord">LA</div> <div class="chord">MI</div></div>
-<div class="line">Il coraggio che ho</div>
-<div class="line"><div class="chord">LA</div> <div class="chord">MI</div></div>
-<div class="line">Che mi porti lontano</div>
-<div class="line"><div class="chord">LA</div> <div class="chord">MI</div></div>
-<div class="line">Per sentire vicino</div>
-<div class="line">E metto i miei piedi</div>
-<div class="line"><div class="chord">LA</div> <div class="chord">MI</div></div>
-<div class="line">Nella vita che c'è</div>
-<div class="line"><div class="chord">LA</div> <div class="chord">MI</div> <div class="chord">SI</div> <div class="chord">MI</div></div>
-<div class="line">Lì dove mi chiedi i miei piedi con te</div>
-<div class="line"><div class="chord">LA</div> <div class="chord">MI</div></div>
-<div class="line">Lì dove mi chiedi</div>
-<div class="line">In piedi nei piedi</div>
-<div class="line"><div class="chord">LA</div> <div class="chord">MI</div></div>
-<div class="line">Il coraggio che ho</div>
-<div class="line"><div class="chord">LA</div> <div class="chord">MI</div></div>
-<div class="line">Che mi porti lontano</div>
-<div class="line"><div class="chord">LA</div> <div class="chord">MI</div></div>
-<div class="line">Per sentire vicino</div>
-<div class="line">E metto i miei piedi</div>
-<div class="line"><div class="chord">LA</div> <div class="chord">MI</div></div>
-<div class="line">Nella vita che c'è</div>
-<div class="line"><div class="chord">LA</div> <div class="chord">MI</div> <div class="chord">SI</div> <div class="chord">MI</div></div>
-<div class="line">Lì dove mi chiedi i miei piedi con te</div>
-<div class="line"><div class="chord">LA</div> <div class="chord">MI</div></div>
-<div class="line">Lì dove mi chiedi</div>
-<div class="line"><div class="chord">MI</div></div>
-<div class="line">In piedi nei piedi</div>
-<div class="line"><div class="chord">LA</div> <div class="chord">MI</div></div>
-<div class="line">Il coraggio che ho</div>
-<div class="line"><div class="chord">LA</div> <div class="chord">MI</div></div>
-<div class="line">Che mi porti lontano</div>
-<div class="line"><div class="chord">LA</div> <div class="chord">MI</div></div>
-<div class="line">Per sentire vicino</div>
-<div class="line">E metto i miei piedi</div>
-<div class="line"><div class="chord">LA</div> <div class="chord">MI</div></div>
-<div class="line">Nella vita che c'è</div>
-<div class="line"><div class="chord">LA</div> <div class="chord">MI</div> <div class="chord">SI</div> <div class="chord">MI</div></div>
-<div class="line">Lì dove mi chiedi i miei piedi con te</div>
-<div class="line"><div class="chord">LA</div> <div class="chord">MI</div></div>
-<div class="line">Lì dove mi chiedi</div>
-<div class="line">In piedi nei piedi</div>
-<div class="line"><div class="chord">LA</div> <div class="chord">MI</div></div>
-<div class="line">Il coraggio che ho</div>
-<div class="line"><div class="chord">LA</div> <div class="chord">MI</div></div>
-<div class="line">Che mi porti lontano</div>
-<div class="line"><div class="chord">LA</div> <div class="chord">MI</div></div>
-<div class="line">Per sentire vicino</div>
-<div class="line">E metto i miei piedi</div>
-<div class="line"><div class="chord">LA</div> <div class="chord">MI</div></div>
-<div class="line">Nella vita che c'è</div>
-<div class="line"><div class="chord">LA</div> <div class="chord">MI</div> <div class="chord">SI</div> <div class="chord">MI</div></div>
-<div class="line">Lì dove mi chiedi i miei piedi con te</div>
-<div class="line"><div class="chord">LA</div> <div class="chord">MI</div></div>
-<div class="line">Lì dove mi chiedi</div>
-<div class="line"><div class="chord">MI</div></div>
-<div class="line">In piedi nei piedi</div>
-<div class="line"><div class="chord">LA</div> <div class="chord">MI</div></div>
-<div class="line">Il coraggio che ho</div>
-<div class="line"><div class="chord">LA</div> <div class="chord">MI</div></div>
-<div class="line">Che mi porti lontano</div>
-<div class="line"><div class="chord">LA</div> <div class="chord">MI</div></div>
-<div class="line">Per sentire vicino</div>
-<div class="line">E metto i miei piedi</div>
-<div class="line"><div class="chord">LA</div> <div class="chord">MI</div></div>
-<div class="line">Nella vita che c'è</div>
-<div class="line"><div class="chord">LA</div> <div class="chord">MI</div> <div class="chord">SI</div> <div class="chord">MI</div></div>
-<div class="line">Lì dove mi chiedi i miei piedi con te</div>
-<div class="line"><div class="chord">LA</div> <div class="chord">MI</div></div>
-<div class="line">Lì dove mi chiedi...</div>
+</div>
+<div class="verse">
+<div class="line">In piedi nei piedi ..</div>
 </div>
 </div>
 </div>
@@ -6753,7 +6742,6 @@ document.addEventListener("DOMContentLoaded", function() {
 <div class="verse">
 </div>
 <div class="verse">
-<div class="line">Intro:</div>
 <div class="line"><div class="chord">RE</div> <div class="chord">SOL</div> <div class="chord">LA</div> <div class="chord">RE</div></div>
 <div class="line"><div class="chord">FA</div># <div class="chord">SI</div>- <div class="chord">SOL</div> <div class="chord">RE</div></div>
 <div class="line"><div class="chord">SOL</div> <div class="chord">LA</div> <div class="chord">SI</div>- <div class="chord">SOL</div> <div class="chord">LA</div> <div class="chord">RE</div></div>
@@ -6774,6 +6762,8 @@ document.addEventListener("DOMContentLoaded", function() {
 <div class="line">E null'omo degno è</div>
 <div class="line">         <div class="chord">RE</div> <div class="chord">SOL</div></div>
 <div class="line">Te mentovare</div>
+</div>
+<div class="verse">
 <div class="line">      <div class="chord">RE</div></div>
 <div class="line">Si laudato Mio Signore</div>
 <div class="line">        <div class="chord">SOL</div> <div class="chord">RE</div></div>
@@ -6790,6 +6780,8 @@ document.addEventListener("DOMContentLoaded", function() {
 <div class="line">Di Te Altissimo Signore</div>
 <div class="line">          <div class="chord">RE</div></div>
 <div class="line">Porta il segno</div>
+</div>
+<div class="verse">
 <div class="line">      <div class="chord">LA</div> <div class="chord">RE</div></div>
 <div class="line">Si laudato Mio Signore</div>
 <div class="line">       <div class="chord">SOL</div> <div class="chord">LA</div></div>
@@ -6804,8 +6796,6 @@ document.addEventListener("DOMContentLoaded", function() {
 <div class="line">Aria, nuvole e maltempo</div>
 <div class="line">          <div class="chord">RE</div> <div class="chord">SOL</div> <div class="chord">LA</div> <div class="chord">RE</div></div>
 <div class="line">Che alle Tue creature dan sostentamento</div>
-</div>
-<div class="verse">
 </div>
 <div class="verse">
 <div class="line"><div class="chord">RE</div> <div class="chord">SOL</div> <div class="chord">RE</div> <div class="chord">SI</div>- <div class="chord">MI</div> <div class="chord">LA</div></div>
@@ -6844,6 +6834,8 @@ document.addEventListener("DOMContentLoaded", function() {
 <div class="line">Ella è che ci sostenta</div>
 <div class="line">    <div class="chord">DO</div> <div class="chord">DO</div></div>
 <div class="line">E ci governa</div>
+</div>
+<div class="verse">
 <div class="line">     <div class="chord">FA</div></div>
 <div class="line">Si laudato Mio Signore</div>
 <div class="line">      SIb <div class="chord">DO</div> REm</div>
@@ -6852,6 +6844,8 @@ document.addEventListener("DOMContentLoaded", function() {
 <div class="line">Molti fiori coloriti</div>
 <div class="line">     <div class="chord">FA</div></div>
 <div class="line">E verde l'erba</div>
+</div>
+<div class="verse">
 <div class="line">   <div class="chord">DO</div> <div class="chord">FA</div></div>
 <div class="line">Si laudato per coloro</div>
 <div class="line">     SIb <div class="chord">DO</div></div>
@@ -6860,6 +6854,8 @@ document.addEventListener("DOMContentLoaded", function() {
 <div class="line">Sopportando infermità</div>
 <div class="line">     SIb <div class="chord">FA</div></div>
 <div class="line">E tribolazio-ne</div>
+</div>
+<div class="verse">
 <div class="line">     SIb <div class="chord">FA</div></div>
 <div class="line">E beati sian coloro</div>
 <div class="line">       SOLm SIb</div>
@@ -6868,6 +6864,8 @@ document.addEventListener("DOMContentLoaded", function() {
 <div class="line">Che da Te Buon Signore</div>
 <div class="line">       <div class="chord">DO</div> <div class="chord">FA</div></div>
 <div class="line">Avran coro-na</div>
+</div>
+<div class="verse">
 <div class="line">      <div class="chord">DO</div> <div class="chord">FA</div></div>
 <div class="line">Si laudato Mio Signore</div>
 <div class="line">         SIb <div class="chord">DO</div></div>
@@ -6876,6 +6874,8 @@ document.addEventListener("DOMContentLoaded", function() {
 <div class="line">Chè da lei nessun che vive</div>
 <div class="line">      SIb <div class="chord">FA</div></div>
 <div class="line">Può scappa--re</div>
+</div>
+<div class="verse">
 <div class="line">    SIb <div class="chord">FA</div></div>
 <div class="line">E beati saran quelli</div>
 <div class="line">      SOLm SIb</div>

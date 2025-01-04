@@ -1,6 +1,5 @@
 Cantico delle creature
 
-Intro:
 RE SOL LA RE
 FA# SI- SOL RE
 SOL LA SI- SOL LA RE
@@ -20,6 +19,7 @@ Che l'altissimo Tu sei
 E null'omo degno è
          RE SOL
 Te mentovare
+
       RE
 Si laudato Mio Signore
         SOL RE
@@ -36,6 +36,7 @@ Che è bellezza e splendore
 Di Te Altissimo Signore
           RE
 Porta il segno
+
       LA RE
 Si laudato Mio Signore
        SOL LA
@@ -50,7 +51,6 @@ Si laudato per Frate Vento
 Aria, nuvole e maltempo
           RE SOL LA RE
 Che alle Tue creature dan sostentamento
-
 
 RE SOL RE SI- MI LA
 RE SOL LA SI- RE LA RE
@@ -85,6 +85,7 @@ Per la nostra Madre Terra
 Ella è che ci sostenta
     DO DO
 E ci governa
+
      FA
 Si laudato Mio Signore
       SIb DO REm
@@ -93,6 +94,7 @@ Vari frutti lei produce
 Molti fiori coloriti
      FA
 E verde l'erba
+
    DO FA
 Si laudato per coloro
      SIb DO
@@ -101,6 +103,7 @@ Che perdonano per il Tuo amore
 Sopportando infermità
      SIb FA
 E tribolazio-ne
+
      SIb FA
 E beati sian coloro
        SOLm SIb
@@ -109,6 +112,7 @@ Che cammineranno in pace
 Che da Te Buon Signore
        DO FA
 Avran coro-na
+
       DO FA
 Si laudato Mio Signore
          SIb DO
@@ -117,6 +121,7 @@ Per la Morte Corporale
 Chè da lei nessun che vive
       SIb FA
 Può scappa--re
+
     SIb FA
 E beati saran quelli
       SOLm SIb

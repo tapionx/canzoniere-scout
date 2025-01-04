@@ -1,8 +1,8 @@
 I Cento Passi
 Modena City Ramblers
 
-Intro:
 MIm DO SOL SI
+
 MIm SOL
 Nato nella terra dei vespri e degli aranci
 DO SI
@@ -19,6 +19,7 @@ MIm SOL
 Si sa dove si nasce ma non come si muore
 DO SI
 e non se un ideale ti porterà dolore
+
 LAm MIm
 Ma la tua vita adesso puoi cambiare
 LAm MIm
@@ -27,6 +28,7 @@ LAm MIm
 Gridando forte, senza aver paura
 SI
 contando cento passi lungo la tua strada
+
 MIm
 Allora Uno, due, tre, quattro
 DO
@@ -43,6 +45,7 @@ SOL
 Uno, due, tre, quattro
 SI MIm
 cinque, dieci, cento passi!
+
 MIm SOL
 Poteva come tanti scegliere e partire
 DO SI
@@ -61,6 +64,7 @@ DO
 gli amici disperati
 SI
 non l'hanno più trovato
+
 LAm MIm
 Allora dimmi se tu sai contare
 DO MIm
@@ -69,6 +73,7 @@ LAm MIm
 Contare, camminare insieme a cantare
 SI
 la storia di Peppino e degli amici siciliani
+
 MIm
 Allora Uno, due, tre, quattro
 DO
@@ -76,37 +81,15 @@ cinque, dieci, cento passi
 SOL
 Uno, due, tre, quattro
 SI
-cinque, dieci, cento passi!
-MIm
-Uno, due, tre, quattro
-DO
-cinque, dieci, cento passi
-SOL
-Uno, due, tre, quattro
-SI
-cinque, dieci, cento passi!
-MIm
-Uno, due, tre, quattro
-DO
-cinque, dieci, cento passi
-SOL
-Uno, due, tre, quattro
-SI
-cinque, dieci, cento passi!
-MIm
-Uno, due, tre, quattro
-DO
-cinque, dieci, cento passi
-SOL
-Uno, due, tre, quattro
-SI MIm
-cinque, dieci, cento passi!
+cinque, dieci, cento passi! (x4)
+
 MIm
 Era la notte buia dello Stato Italiano
 Quella del nove maggio settantotto
 La notte di via Caetani
 del corpo di Aldo Moro
 L'alba dei funerali di uno stato...
+
 LAm MIm
 Allora dimmi se tu sai contare
 DO MIm
@@ -115,6 +98,7 @@ LAm MIm
 Contare, camminare insieme a cantare
 SI
 la storia di Peppino e degli amici siciliani
+
 MIm
 Allora Uno, due, tre, quattro
 DO
@@ -122,28 +106,4 @@ cinque, dieci, cento passi
 SOL
 Uno, due, tre, quattro
 SI
-cinque, dieci, cento passi!
-MIm
-Uno, due, tre, quattro
-DO
-cinque, dieci, cento passi
-SOL
-Uno, due, tre, quattro
-SI
-cinque, dieci, cento passi!
-MIm
-Uno, due, tre, quattro
-DO
-cinque, dieci, cento passi
-SOL
-Uno, due, tre, quattro
-SI
-cinque, dieci, cento passi!
-MIm
-Uno, due, tre, quattro
-DO
-cinque, dieci, cento passi
-SOL
-Uno, due, tre, quattro
-SI MIm
-cinque, dieci, cento passi!
+cinque, dieci, cento passi! (x4)

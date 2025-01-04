@@ -2,8 +2,8 @@ Il coraggio nei piedi
 
 Route Nazionale RS 2014 (San Rossore)
 
-Intro:
 MI LA MI LA MI
+
 MI
 Come Giuseppe
 SI DO#m
@@ -18,6 +18,7 @@ SOL#m7 LA
 E l'amò fino alla fine
 SI
 Ecco un po' così vorrei
+
 MI
 Come Maria
 SI DO#m
@@ -32,6 +33,7 @@ SOL#m7 LA7+
 E l'amò fino alla fine
 SI
 Ecco un po' così vorrei
+
 MI
 In piedi nei piedi
 LA MI
@@ -47,6 +49,7 @@ LA MI SI MI
 Lì dove mi chiedi i miei piedi con te
 LA MI SI MI SI
 Lì dove mi chiedi in piedi per te
+
 MI
 Come Francesco
 SI DO#m
@@ -61,6 +64,7 @@ SOL#m7 LA
 E l'amò fino alla fine
 SI
 Ecco un po' così vorrei
+
 MI
 Come Sophie
 SI DO#m
@@ -75,21 +79,9 @@ SOL#m7 LA
 E l'amò fino alla fine
 SI
 Ecco un po' così vorrei
-MI
-In piedi nei piedi
-LA MI
-Il coraggio che ho
-LA MI
-Che mi porti lontano
-LA MI
-Per sentire vicino
-E metto i miei piedi
-LA MI
-Nella vita che c'è
-LA MI SI MI
-Lì dove mi chiedi i miei piedi con te
-LA MI SI MI SI
-Lì dove mi chiedi in piedi per te
+
+In piedi nei piedi ..
+
 MI
 Come Peppino
 SI DO#m
@@ -104,6 +96,7 @@ SOL#m7 LA
 E contò fino alla fine
 SI
 Ecco un po' così vorrei
+
 MI
 E come me
 SI DO#m
@@ -118,76 +111,5 @@ SOL#m7 LA
 E lo chiedo anche ai miei piedi
 SI
 Di essere lì dove tu sei
-MI
-In piedi nei piedi
-LA MI
-Il coraggio che ho
-LA MI
-Che mi porti lontano
-LA MI
-Per sentire vicino
-E metto i miei piedi
-LA MI
-Nella vita che c'è
-LA MI SI MI
-Lì dove mi chiedi i miei piedi con te
-LA MI
-Lì dove mi chiedi
-In piedi nei piedi
-LA MI
-Il coraggio che ho
-LA MI
-Che mi porti lontano
-LA MI
-Per sentire vicino
-E metto i miei piedi
-LA MI
-Nella vita che c'è
-LA MI SI MI
-Lì dove mi chiedi i miei piedi con te
-LA MI
-Lì dove mi chiedi
-MI
-In piedi nei piedi
-LA MI
-Il coraggio che ho
-LA MI
-Che mi porti lontano
-LA MI
-Per sentire vicino
-E metto i miei piedi
-LA MI
-Nella vita che c'è
-LA MI SI MI
-Lì dove mi chiedi i miei piedi con te
-LA MI
-Lì dove mi chiedi
-In piedi nei piedi
-LA MI
-Il coraggio che ho
-LA MI
-Che mi porti lontano
-LA MI
-Per sentire vicino
-E metto i miei piedi
-LA MI
-Nella vita che c'è
-LA MI SI MI
-Lì dove mi chiedi i miei piedi con te
-LA MI
-Lì dove mi chiedi
-MI
-In piedi nei piedi
-LA MI
-Il coraggio che ho
-LA MI
-Che mi porti lontano
-LA MI
-Per sentire vicino
-E metto i miei piedi
-LA MI
-Nella vita che c'è
-LA MI SI MI
-Lì dove mi chiedi i miei piedi con te
-LA MI
-Lì dove mi chiedi...
+
+In piedi nei piedi ..

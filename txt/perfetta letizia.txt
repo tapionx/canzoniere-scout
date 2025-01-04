@@ -38,8 +38,10 @@ che cosa ci darà il domani
 
 RE       FA#-  SOL    LA
 Tu scrivi che questa non è
-RE                LA                SOL              LA
-perfetta letizia, perfetta letizia, perfetta letizia ah ah
+RE                LA
+perfetta letizia, perfetta
+SOL              LA
+letizia, perfetta letizia ah ah
 
 RE
 Frate Leone
@@ -60,11 +62,15 @@ lui possa far cristiani....
 
 RE       FA#-  SOL    LA
 Tu scrivi che questa non è
-RE                LA                SOL              LA
-perfetta letizia, perfetta letizia, perfetta letizia ah ah
+RE                LA
+perfetta letizia, perfetta letizia, 
+SOL              LA
+perfetta letizia ah ah
 
-SOL            RE               FA#-              SI7 
-Se in mezzo a Frate Inverno, tra neve, freddo e vento,
+SOL            RE
+Se in mezzo a Frate Inverno,
+    FA#-              SI7
+tra neve, freddo e vento,
 
 MI
 stasera arriveremo a casa
@@ -93,7 +99,11 @@ e il male trasformarlo in bene
 
 MI        SOL#- LA    SI
 Tu scrivi che questa è
-MI                 SOL#-            LA                    SI
-perfetta letizia, perfetta letizia, perfetta letizia ah, ah perfetta letizia
-MI                 SOL#-            LA                    SI
-perfetta letizia, perfetta letizia, perfetta letizia ah, ah perfetta letizia
+MI                 SOL#-
+perfetta letizia, perfetta letizia, 
+LA                    SI
+perfetta letizia ah, ah perfetta letizia
+MI                 SOL#-
+perfetta letizia, perfetta letizia,
+ LA                    SI 
+perfetta letizia ah, ah perfetta letizia
