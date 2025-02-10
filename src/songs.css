@@ -4,9 +4,34 @@
 }
 @media print {
     html, body {
-        width: 148,5mm;
+        width: 148.5mm;
         height: 210mm;
     }
+}
+
+body {
+    font-family: "Source Code Pro", serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+}
+
+body {
+}
+
+#container {
+
+}
+
+.song {
+    break-after: page;
+    width: fit-content;
+    padding: 5mm;
+}
+
+.lyrics {
+    letter-spacing: -0.27mm;
+    font-size: 40px;
 }
 
 .verse {
@@ -24,20 +49,16 @@
 }
 
 .title {
-    font-weight: bold;
-    font-size: 3rem;
+    font-weight: 600;
+    font-size: 40px;
+    text-wrap: nowrap;
 }
 
 .chord {
     display: inline;
-    font-weight: bold;
+    font-weight: 600;
 }
 
 .line {
     white-space: pre;
-}
-.song {
-    font-family: monospace;
-    break-after: page;
-    width: fit-content;
 }
